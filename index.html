@@ -3,36 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEEK5 ASSIGNMENT</title>
+    <title>WEEK7 ASSIGNMENT</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-       <h1 id="main-heading">javascript assignment</h1>
-    </header>
-    <main class="main-content">
-        <section class="control-panel">
-            <button id="change-text-btn" class="btn">Change Heading Text</button>
-            <button id="change-style-btn" class="btn">Toggle Dark Mode</button>
-            <button id="add-element-btn" class="btn">Add New Item</button>
-            <button id="remove-element-btn" class="btn">Remove Last Item</button>
-        </section>
+     <div class="container">
+        <header class="header">
+            <h1 class="title animate-pop">Mom's Memory Keeper</h1>
+            <p class="subtitle">Preserve your special moments</p>
+        </header>
 
-        <section class="content-area">
-            <article class="card">
-                <h2>Welcome to the javascript Demo</h2>
-                <p id="dynamic-text">This content can be changed dynamically with JavaScript.</p>
-                <ul id="item-list">
-                    <li>Initial item 1</li>
-                    <li>Initial item 2</li>
-                </ul>
-            </article>
-        </section>
-    </main>
+        <main class="main-content">
+            <div class="memory-controls">
+                <button id="new-memory-btn" class="btn animate-bounce">+ New Memory</button>
+                <div class="theme-toggle">
+                    <span>Theme:</span>
+                    <button id="light-theme" class="theme-btn active">Light</button>
+                    <button id="dark-theme" class="theme-btn">Dark</button>
+                </div>
+            </div>
 
-    <footer class="footer">
-          <p id="footer-text">&copy; 2025 EmpiSolutions. All rights Reserved.</p>
-    </footer>
-     <script src="script.js"></script>
+            <div class="memory-form hidden">
+                <h2>Add a New Memory</h2>
+                <form id="memory-form">
+                    <div class="form-group">
+                        <label for="memory-title">Title</label>
+                        <input type="text" id="memory-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memory-date">Date</label>
+                        <input type="date" id="memory-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memory-content">Memory</label>
+                        <textarea id="memory-content" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Save Memory</button>
+                        <button type="button" id="cancel-memory" class="btn btn-outline">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="memories-container">
+                <div class="no-memories animate-fade">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/10/03/47/girl-2617864_640.png" alt="No memories yet" class="empty-state-img">
+                    <p>No memories saved yet. Add your first one!</p>
+                </div>
+                <div id="memories-list" class="memories-list"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Made with ❤️ for My best human being </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
