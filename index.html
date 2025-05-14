@@ -3,62 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEEK7 ASSIGNMENT</title>
+    <title>WEEK8 ASSIGNMENT</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
      <div class="container">
         <header class="header">
-            <h1 class="title animate-pop">Mom's Memory Keeper</h1>
-            <p class="subtitle">Preserve your special moments</p>
+            <h1><i class="fas fa-utensils"></i> project simple recipe finder</h1>
+            <p>discover delicious recipes with just the ingredients in your kitchen</p>
         </header>
 
-        <main class="main-content">
-            <div class="memory-controls">
-                <button id="new-memory-btn" class="btn animate-bounce">+ New Memory</button>
-                <div class="theme-toggle">
-                    <span>Theme:</span>
-                    <button id="light-theme" class="theme-btn active">Light</button>
-                    <button id="dark-theme" class="theme-btn">Dark</button>
-                </div>
-            </div>
+         <main>
+             <section class="search-section">
+                 <div class="search-container">
+                     <input type="text" id="search-input" placeholder="Search by ingredient (e.g., chicken, pasta)">
+                      <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                 </div>
+             </section>
 
-            <div class="memory-form hidden">
-                <h2>Add a New Memory</h2>
-                <form id="memory-form">
-                    <div class="form-group">
-                        <label for="memory-title">Title</label>
-                        <input type="text" id="memory-title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="memory-date">Date</label>
-                        <input type="date" id="memory-date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="memory-content">Memory</label>
-                        <textarea id="memory-content" required></textarea>
-                    </div>
-                    <div class="form-actions">
-                        <button type="submit" class="btn">Save Memory</button>
-                        <button type="button" id="cancel-memory" class="btn btn-outline">Cancel</button>
-                    </div>
-                </form>
-            </div>
-            <div class="memories-container">
-                <div class="no-memories animate-fade">
-                    <img src="https://cdn.pixabay.com/photo/2017/08/10/03/47/girl-2617864_640.png" alt="No memories yet" class="empty-state-img">
-                    <p>No memories saved yet. Add your first one!</p>
-                </div>
-                <div id="memories-list" class="memories-list"></div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>Made with ❤️ for My best human being </p>
+             <section class="results-section">
+                  <h2>Search Results</h2>
+                  <div id="results-container" class="results-grid">
+                <!-- Recipes will be displayed here -->
+                      <div class="initial-message">
+                     <i class="fas fa-search"></i>
+                      <p>Enter any ingredient you want to find just a simple recipe</p>
+                     </div>
+                  </div>
+              </section>
+         </main>
+         <footer>
+             <p>&copy; 2025 Recipe Finder | with your favourite tech fixer Empisolutions</p>
         </footer>
-    </div>
 
-    <script src="script.js"></script>
+         <script src="script.js"></script>
 </body>
 </html>
